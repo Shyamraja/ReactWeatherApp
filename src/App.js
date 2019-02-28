@@ -12,7 +12,8 @@ class App extends Component {
       tempraure: undefined,
       city: undefined,
       humidity: undefined,
-      description: undefined,
+      description: undefined ,
+      wind: undefined,
       error: undefined
     }
   }
@@ -20,8 +21,6 @@ class App extends Component {
     e.preventDefault();
 
     const city = e.target.elements.city.value;
-
-   
     const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=metric&units=metric`);
     const data = await api_call.json();
    
@@ -33,16 +32,18 @@ class App extends Component {
          city:        data.name,
          humidity:    data.main.humidity,
          description: data.weather[0].description,
-          error:       ""
+         wind:       data.main.wind,
+         error:       ""
 
       });
    
     }else{
       this.setState({
           tempraure:   undefined,
-         city:        undefined,
-         humidity:    undefined,
-         description: undefined,
+          city:        undefined,
+          humidity:    undefined,
+          description: undefined,
+          wind:      undefined,
           error:       undefined
 
       });
@@ -63,10 +64,10 @@ class App extends Component {
                 <div className="col-xs-7 form-container">
                   <Form getWeather={this.getWeather}/>
                   <Weather tempraure={this.state.tempraure} 
-                            
-                       humidity={this.state.humidity}
-                       city={this.state.city}
+                        city={this.state.city}     
+                        humidity={this.state.humidity}
                         description={this.state.description}
+                        wind={this.state.wind}
                         error={this.state.error}
                     />
                   </div>
