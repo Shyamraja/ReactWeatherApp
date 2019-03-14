@@ -13,11 +13,7 @@ class App extends Component {
       city: undefined,
       humidity: undefined,
       description: undefined ,
-<<<<<<< refs/remotes/origin/master
-      wind: undefined,
-=======
       windSpeed: undefined,
->>>>>>> updated
       error: undefined
     }
   }
@@ -36,11 +32,7 @@ class App extends Component {
          city:        data.name,
          humidity:    data.main.humidity,
          description: data.weather[0].description,
-<<<<<<< refs/remotes/origin/master
-         wind:       data.main.wind,
-=======
-         windSpeed:       data.main.windSpeed,
->>>>>>> updated
+         windSpeed:   data.main.windSpeed,
          error:       ""
 
       });
@@ -51,11 +43,7 @@ class App extends Component {
           city:        undefined,
           humidity:    undefined,
           description: undefined,
-<<<<<<< refs/remotes/origin/master
-          wind:      undefined,
-=======
           windSpeed:   undefined,
->>>>>>> updated
           error:       undefined
 
       });
@@ -79,11 +67,7 @@ class App extends Component {
                         city={this.state.city}     
                         humidity={this.state.humidity}
                         description={this.state.description}
-<<<<<<< refs/remotes/origin/master
-                        wind={this.state.wind}
-=======
                         windSpeed={this.state.windSpeed}
->>>>>>> updated
                         error={this.state.error}
                     />
                   </div>
