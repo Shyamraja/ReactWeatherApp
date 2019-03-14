@@ -4,8 +4,13 @@ import "./App.css";
 import App from './App';
 
 //const reactTarget = document.getElementById("react-target");
+<<<<<<< refs/remotes/origin/master
 import ServiceWorker from '../public/ServiceWorker';
 
+=======
+import * as ServiceWorker from './ServiceWorker';
+//import serviceworker from './Serviceworker';
+>>>>>>> updated
 ReactDom.render(<App />, document.getElementById("root"));
 
 console.log("webpack bundle works");
